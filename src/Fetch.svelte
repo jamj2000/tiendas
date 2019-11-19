@@ -5,18 +5,16 @@
   export let searchTerm = undefined;
 
   let jsonResponse = [];
-  //let data = [];
 
   $: regex = new RegExp(searchTerm, "gi");
   $: data = searchTerm
-    ? jsonResponse.filter(element => element.title.match(regex))
+    ? jsonResponse.filter(element => regex.test(element.title))
     : jsonResponse;
 
   onMount(async function() {
     const response = await fetch(url);
     const json = await response.json();
     jsonResponse = json;
-    //data = json;
   });
 </script>
 

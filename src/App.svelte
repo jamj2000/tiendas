@@ -2,11 +2,6 @@
   import Fetch from "./Fetch.svelte";
   import Form from "./Form.svelte";
 
-  //   const props = {
-  //     url: "https://jsonplaceholder.typicode.com/todos",
-  //     title: "A list of todos"
-  //   };
-
   let searchTerm;
 
   function handleSubmit() {
