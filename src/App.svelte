@@ -1,22 +1,12 @@
 <script>
-  import Fetch from "./Fetch.svelte";
-  import Form from "./Form.svelte";
+  import { Router } from "svelte-routing";
+  import Nav from "./Nav.svelte";
+  import Contenido from "./Contenido.svelte";
 
-  let searchTerm;
-
-  function handleSubmit() {
-    const { value } = this.elements.search;
-    searchTerm = value;
-  }
 </script>
 
-<Form {handleSubmit}/>
+<Router>
+  <Nav />
+  <Contenido />
+</Router>
 
-<Fetch {searchTerm} let:data>
-  <h1>A list of todos</h1>
-  <ul>
-    {#each data as link}
-      <li><a href={link.url}>{link.title}</a></li>
-    {/each}
-  </ul>
-</Fetch>
