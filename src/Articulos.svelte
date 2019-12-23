@@ -6,18 +6,18 @@
 
   let busqueda = "";
   // this se refiere al formulario
-  let handleSubmit = () => (busqueda = this.elements.buscar.value);
+  function handleSubmit () {busqueda = this.elements.buscar.value};
 
   // this se refiere al input
-  let leer = () => (busqueda = this.value);
+  function handleKeyup () {busqueda = this.value};
 </script>
 
 
 
 <h1>ARTÍCULOS</h1>
-<Form {handleSubmit}  {leer} />
+<Form {handleSubmit} {handleKeyup} />
 
-<Fetch contenido="articulos" let:data>
+<Fetch  {busqueda} contenido="articulos" let:data>
 
   <Boton class="btn btn-insertar">
     <span>✏️</span>

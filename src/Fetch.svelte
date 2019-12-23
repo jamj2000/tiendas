@@ -3,14 +3,14 @@
 
   export let contenido = '';
   export let url = `https://tiendaw.herokuapp.com/api/${contenido}`;
-  export let searchTerm = undefined;
+  export let busqueda = undefined;
 
 
 
   let jsonResponse = [];
 
-  $: regex = new RegExp(searchTerm, "gi");
-  $: data = searchTerm
+  $: regex = new RegExp(busqueda, "gi");
+  $: data = busqueda
     ? jsonResponse.filter(element => regex.test(element.nombre))
     : jsonResponse;
 
