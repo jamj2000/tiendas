@@ -5,7 +5,13 @@
 
 </script>
 
-<div>
+<style>
+main {
+  padding: 20px;
+}
+</style>
+
+<main>
   <Route path="/articulos" component={Articulos} />
   <Route path="/clientes" component={Clientes} />
-</div>
+</main>

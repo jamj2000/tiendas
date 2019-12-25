@@ -8,7 +8,7 @@
     font-weight: bold;
     padding-left: 20px;
     padding-right: 20px;
-    cursor: pointer;
+    cursor:  pointer;
     border-radius: 3px;
     font-size: 1em;
     transition: all 0.3s ease-in-out;
