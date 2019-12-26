@@ -33,12 +33,11 @@
   }
 
   .menu li:hover {
-    text-shadow: -2px -2px 8px rgb(0, 0, 0);
-    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+    text-shadow: 3px 3px 4px #6f6f70;
   }
 
   .menu li {
-        font-weight: bold;
+    font-weight: bold;
     font-size: 16px;
     padding: 15px 5px;
     white-space: nowrap;
