@@ -1,5 +1,4 @@
 <script>
-  import Fetch from "./Fetch.svelte";
   import Form from "./Form.svelte";
   import Cliente from "./Cliente.svelte";
   import Boton from "./Boton.svelte";
@@ -17,7 +16,7 @@
 <h1>CLIENTES</h1>
 <Form {handleSubmit} {handleKeyup} />
 
-<Fetch  {busqueda} contenido="clientes" let:data>
+<!-- <Fetch  {busqueda} contenido="clientes" let:data>
 
   <Boton class="btn btn-insertar">
     <span>✏️</span>
@@ -27,4 +26,4 @@
     <Cliente {cliente} />
   {/each}
 
-</Fetch>
+</Fetch> -->

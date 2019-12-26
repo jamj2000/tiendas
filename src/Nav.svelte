@@ -26,12 +26,16 @@
     list-style-type: none;
   }
 
-  .button a {
+  /* .button a {
     padding: 7.5px 15px;
     background: palegreen;
     border: 1px mediumseagreen solid;
   }
-
+  .logo a,
+  .toggle a {
+    font-size: 20px;
+  } */
+  
   .menu li:hover {
     text-shadow: 3px 3px 4px #6f6f70;
   }
@@ -42,10 +46,7 @@
     padding: 15px 5px;
     white-space: nowrap;
   }
-  .logo a,
-  .toggle a {
-    font-size: 20px;
-  }
+
 
   /* Móvil */
   .menu {
@@ -66,7 +67,7 @@
     order: 3;
     display: none;
   }
-  .item.active {
+  .active {
     display: block;
   }
   /* Tablet */
@@ -129,13 +130,13 @@
       <Link to="/clientes">👥 Clientes</Link>
     </li>
     <li class="item active button">
-      <a href="/">Sign In</a>
+      <Link to="/">Sign In</Link>
     </li>
     <li class="item active button secondary">
-      <a href="/">Sign Up</a>
+      <Link to="/">Sign Up</Link>
     </li>
     <li class="toggle">
-      <a href="/" on:click={toggle}>🗙</a>
+      <Link on:click={toggle}>🗙</Link>
     </li>
   </ul>
 </nav>
