@@ -19,9 +19,20 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  :global(div#OK, div#KO) {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    font-size: 60px;
+    background-color: transparent;
+  }
 </style>
 
 <Router>
   <Nav />
   <Contenido />
 </Router>
+<div id="OK">😊</div>
+<div id="KO">😟</div>

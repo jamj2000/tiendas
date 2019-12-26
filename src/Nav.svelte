@@ -122,13 +122,13 @@
       <Link to="/clientes">Clientes</Link>
     </li>
     <li class="item active button">
-      <a href="#">Sign In</a>
+      <a href="/">Sign In</a>
     </li>
     <li class="item active button secondary">
-      <a href="#">Sign Up</a>
+      <a href="/">Sign Up</a>
     </li>
     <li class="toggle">
-      <a href="#" on:click={toggle}>🗙</a>
+      <a href="/" on:click={toggle}>🗙</a>
     </li>
   </ul>
 </nav>

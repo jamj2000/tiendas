@@ -1,6 +1,7 @@
 <script>
   let class_name = "";
   export { class_name as class };
+
 </script>
 
 <style>
@@ -57,7 +58,7 @@
     background: #ffc1bf;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 500px) {
     .btn-insertar::after,
     .btn-modificar::after,
     .btn-eliminar::after {
@@ -67,6 +68,6 @@
 </style>
 
 
-<button class={class_name}>
+<button class={class_name} on:click >
   <slot />
 </button>

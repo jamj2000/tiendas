@@ -3,6 +3,7 @@
   export let cliente = {};
 </script>
 
+
 <div>
   {cliente.nombre} {cliente.apellidos}
   <Boton class="btn btn-modificar">

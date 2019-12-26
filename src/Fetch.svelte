@@ -12,11 +12,19 @@
     ? jsonResponse.filter(element => regex.test(element.nombre))
     : jsonResponse;
 
-  onMount(async () => {
+  // onMount(async () => {
+  //   const response = await fetch(url);
+  //   jsonResponse   = await response.json();
+
+  //   //setInterval (ajax, 1000); // solicitamos datos cada 1 segs.
+  // });
+
+  onMount (load);
+  
+  export async function load(){
     const response = await fetch(url);
     jsonResponse   = await response.json();
-  });
-
+  }
 </script>
 
 <slot {data} />
