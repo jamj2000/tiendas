@@ -91,3 +91,7 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+# An example
+
+- https://www.valentinog.com/blog/svelte/ by Valentino Gagliardi
