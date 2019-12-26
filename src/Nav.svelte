@@ -21,6 +21,7 @@
     background: lightblue;
     padding: 8px;
   }
+
   ul {
     list-style-type: none;
   }
@@ -30,7 +31,14 @@
     background: palegreen;
     border: 1px mediumseagreen solid;
   }
+
+  .menu li:hover {
+    text-shadow: -2px -2px 8px rgb(0, 0, 0);
+    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+  }
+
   .menu li {
+        font-weight: bold;
     font-size: 16px;
     padding: 15px 5px;
     white-space: nowrap;
@@ -113,13 +121,13 @@
 <nav>
   <ul class="menu">
     <li class="logo">
-      <Link to="/">Inicio</Link>
+      <Link to="/">🛒 Inicio</Link>
     </li>
     <li class="item active">
-      <Link to="/articulos">Artículos</Link>
+      <Link to="/articulos">🎁 Artículos</Link>
     </li>
     <li class="item active">
-      <Link to="/clientes">Clientes</Link>
+      <Link to="/clientes">👥 Clientes</Link>
     </li>
     <li class="item active button">
       <a href="/">Sign In</a>
