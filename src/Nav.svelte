@@ -18,7 +18,8 @@
   }
 
   nav {
-    background: lightblue;
+    _background: lightblue;
+    background: #fdebc9;
     padding: 8px;
   }
 
