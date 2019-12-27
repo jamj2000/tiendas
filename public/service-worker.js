@@ -3,16 +3,18 @@
 
 
 // Nombre de la caché
-const CACHE_NAME = 'tiendas-v1';
+const CACHE_NAME = 'tiendas-v3';
 
 // Archivos necesarios para el funcionamiento offline
 const CACHE_ASSETS = [
   '/',
   '/index.html',
+  '/offline.html',
   '/favicon.png',
   '/global.css',
   '/build/bundle.css',
-  '/build/bundle.js'
+  '/build/bundle.js',
+  '/images/icons/icon-512x512.png'
 ];
 
 // INSTALL
@@ -63,9 +65,19 @@ self.addEventListener('activate', function (e) {
 self.addEventListener('fetch', function (e) {
   console.log("[Service Worker] * Fetch.");
 
-  // Hacemos petición a la red y si no está disponible obtenemos desde la caché
-  e.respondWith(fetch(e.request)
-    .catch(function () { return caches.match(e.request) }));
+  // if (e.request.mode !== 'navigate') {
+  //   // Not a page navigation, bail.
+  //   return; 
+  // }
+  e.respondWith(
+      fetch(e.request)
+          .catch(() => {
+            return caches.open(CACHE_NAME)
+                .then((cache) => {
+                  return cache.match('/offline.html');
+                });
+          })
+  );
 
 });
 
